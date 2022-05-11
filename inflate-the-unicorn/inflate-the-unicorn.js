@@ -25,6 +25,7 @@ function cornsClick(e) {
       balloonInflate = 0
       corns.src = './images/unicorn-' + balloonInflate + '.png'
       console.log('thanks')
+      alert('Thank you!')
     }
   }
 
@@ -38,6 +39,7 @@ function cornsClick(e) {
       balloonInflate = 0
       corns.src = './images/unicorn-' + balloonInflate + '.png'
       console.log('thanks')
+      alert('Thank you!')
     }
   }
   console.log('click me again!')
@@ -51,6 +53,7 @@ function cornsClick(e) {
       balloonInflate = 0
       corns.src = './images/unicorn-' + balloonInflate + '.png'
       console.log('thanks')
+      alert('Thank you!')
     }
   }
 }
