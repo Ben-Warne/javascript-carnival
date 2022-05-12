@@ -40,7 +40,7 @@ If you would like to challenge yourself, we invite you to complete this exercise
 
 #### References to the cells
 
-The (likely) trickiest part of this whole exercise comes right at the beginning. We need to find a way to _store references_ to all off the cells so we can then put a mole in one of them. 
+The (likely) trickiest part of this whole exercise comes right at the beginning. We need to find a way to _store references_ to all of the cells so we can then put a mole in one of them. 
 
 There are multiple ways you could go about doing this; we would recommend reading up on how to work with [HTML tables using Javascript](https://www.w3schools.com/jsref/coll_table_cells.asp). You can use this to create a variable equal to this _2D array_ (an array that holds arrays), or to create a single array and then fill it with the cells. If that is a daunting task, remember you can always *ask the internet how to do it*.
 
