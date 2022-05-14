@@ -4,28 +4,50 @@
 
 console.log('Dress The Clown!')
 
-let headIndex = 0
+document.onkeydown = checkKey
 
-document.addEventListener('keydown', function (e) {
-  switch (e.key) {
-    case e.key:
-      changeClownHead()
-      changeClothes()
-      break
+function checkKey(e) {
+  if (e.keyCode == '38') {
+    changeVertical(-1)
+  } else if (e.keyCode == '40') {
+    changeVertical(1)
+  } else if (e.keyCode == '37') {
+    changeHorizontal(-1)
+  } else if (e.keyCode == '39') {
+    changeHorizontal(1)
   }
-})
-//function for changing the head
-//make option for multiple heads
-function changeClownHead() {
-  console.log(changeClownHead)
-  let head = document.getElementById('head')
-  let headSrc = './images/head' + headIndex + '.png'
 }
 
-function changeClothes() {
-  if (headIndex > 5) {
-    headIndex = 0
-  } else if (headIndex < 0) {
-    headIndex = 5
-  }
+let indexes = [0, 0, 0]
+
+let mainIndex = 0
+
+let head = document.getElementById('head')
+let body = document.getElementById('body')
+let shoes = document.getElementById('shoes')
+
+let imgs = [head, body, shoes]
+let strings = ['head', 'body', 'shoes']
+let str = strings[mainIndex]
+
+function changeHorizontal(shift) {
+  let index = indexes[mainIndex]
+  let image = imgs[mainIndex]
+  let str = strings[mainIndex]
+  index += shift
+
+  if (index < 0) index = 5
+
+  if (index > 5) index = 0
+
+  indexes[mainIndex] = index
+
+  image.src = './images/' + str + index + '.png'
+}
+
+function changeVertical(shift) {
+  mainIndex += shift
+
+  if (mainIndex < 0) mainIndex = 2
+  if (mainIndex > 2) mainIndex = 0
 }
